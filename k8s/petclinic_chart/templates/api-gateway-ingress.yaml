@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-apiVersion: extensions/v1beta1
-=======
 apiVersion: networking.k8s.io/v1
->>>>>>> feature/msp-24
 kind: Ingress
 metadata:
   annotations:
@@ -10,11 +6,7 @@ metadata:
     kompose.image-pull-secret: regcred
     kompose.service.expose: '{{ .Values.DNS_NAME }}'
     kompose.service.type: nodeport
-<<<<<<< HEAD
-    kompose.version: 1.22.0 (955b78124)
-=======
     kompose.version: 1.26.1 (a9d05d509)
->>>>>>> feature/msp-24
   creationTimestamp: null
   labels:
     io.kompose.service: api-gateway
@@ -25,16 +17,11 @@ spec:
       http:
         paths:
           - backend:
-<<<<<<< HEAD
-              serviceName: api-gateway
-              servicePort: 8080
-=======
               service:
                 name: api-gateway
                 port:
                   number: 8080
             path: /
             pathType: Prefix
->>>>>>> feature/msp-24
 status:
   loadBalancer: {}
