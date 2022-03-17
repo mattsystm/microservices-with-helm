@@ -6,7 +6,11 @@ metadata:
     kompose.image-pull-secret: regcred
     kompose.service.expose: '{{ .Values.DNS_NAME }}'
     kompose.service.type: nodeport
+<<<<<<< HEAD
     kompose.version: 1.22.0 (955b78124)
+=======
+    kompose.version: 1.26.1 (a9d05d509)
+>>>>>>> feature/msp-24
   creationTimestamp: null
   labels:
     io.kompose.service: api-gateway

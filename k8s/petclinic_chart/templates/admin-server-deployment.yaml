@@ -4,7 +4,11 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose.yml -o petclinic_chart/templates
     kompose.image-pull-secret: regcred
+<<<<<<< HEAD
     kompose.version: 1.22.0 (955b78124)
+=======
+    kompose.version: 1.26.1 (a9d05d509)
+>>>>>>> feature/msp-24
   creationTimestamp: null
   labels:
     io.kompose.service: admin-server
@@ -20,7 +24,11 @@ spec:
       annotations:
         kompose.cmd: kompose convert -f docker-compose.yml -o petclinic_chart/templates
         kompose.image-pull-secret: regcred
+<<<<<<< HEAD
         kompose.version: 1.22.0 (955b78124)
+=======
+        kompose.version: 1.26.1 (a9d05d509)
+>>>>>>> feature/msp-24
       creationTimestamp: null
       labels:
         io.kompose.service: admin-server
@@ -31,12 +39,21 @@ spec:
           ports:
             - containerPort: 9090
           resources: {}
+<<<<<<< HEAD
       imagePullSecrets:
         - name: regcred
       restartPolicy: Always
 
+=======
+>>>>>>> feature/msp-24
       initContainers:
       - name: init-discovery-server
         image: busybox
         command: ['sh', '-c', 'until nc -z discovery-server:8761; do echo waiting for discovery-server; sleep 2; done;']
+<<<<<<< HEAD
+=======
+      imagePullSecrets:
+        - name: regcred
+      restartPolicy: Always
+>>>>>>> feature/msp-24
 status: {}
